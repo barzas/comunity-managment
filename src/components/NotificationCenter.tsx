@@ -80,6 +80,13 @@ const NotificationCenter: React.FC<NotificationCenterProps> = ({
     onMarkAsRead(id);
   };
 
+  const handleSendMessage = () => {
+    // Here you would typically send the message to a backend
+    // For now, we'll just clear the input
+    setMessage("");
+    setShowMessageInput(false);
+  };
+
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case "high":
